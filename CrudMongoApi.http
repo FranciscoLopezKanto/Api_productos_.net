@@ -1,0 +1,42 @@
+@CrudMongoApi_HostAddress = http://localhost:5005
+
+### Obtener todos los productos
+GET {{CrudMongoApi_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+### Crear un nuevo producto
+POST {{CrudMongoApi_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Taladro Hilti",
+  "price": 199990,
+  "stock": 3
+}
+
+###
+
+### Obtener un producto por ID (reemplaza {id} con un ID real)
+GET {{CrudMongoApi_HostAddress}}/api/products/{id}
+Accept: application/json
+
+###
+
+### Actualizar un producto (reemplaza {id} con un ID real)
+PUT {{CrudMongoApi_HostAddress}}/api/products/{id}
+Content-Type: application/json
+
+{
+  "name": "Taladro Hilti Actualizado",
+  "price": 189990,
+  "stock": 5
+}
+
+###
+
+### Eliminar un producto (reemplaza {id} con un ID real)
+DELETE {{CrudMongoApi_HostAddress}}/api/products/{id}
+
+###
